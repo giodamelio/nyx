@@ -27,8 +27,7 @@ export default {
     },
     plugins: [
       new htmlPlugin({
-        inject: 'head',
-        title: 'Nyx',
+        template: './src/index.html',
       }),
     ],
     node: {
