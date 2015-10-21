@@ -8,16 +8,20 @@ import {
   NavDropdown,
   MenuItem,
 } from 'react-bootstrap';
+import { LinkContainer } from 'react-router-bootstrap';
 
 export default class App extends React.Component {
   render() {
     return (
       <div>
         <Navbar inverse toggleNavKey={0}>
-          <NavBrand>Nyx</NavBrand>
+          <LinkContainer to='/'>
+            <NavBrand>Nyx</NavBrand>
+          </LinkContainer>
           <Nav right eventKey={0}> {/* This is the eventKey referenced */}
-            <NavItem eventKey={1} href="#">Link</NavItem>
-            <NavItem eventKey={2} href="#">Link</NavItem>
+            <LinkContainer to='/'>
+              <NavItem>Home</NavItem>
+            </LinkContainer>
             <NavDropdown eventKey={3} title="Dropdown" id="collapsible-navbar-dropdown">
               <MenuItem eventKey="1">Action</MenuItem>
               <MenuItem eventKey="2">Another action</MenuItem>
@@ -28,7 +32,9 @@ export default class App extends React.Component {
           </Nav>
         </Navbar>
 
-        {this.props.children}
+        <div className="container">
+          {this.props.children}
+        </div>
       </div>
     );
   }
