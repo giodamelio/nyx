@@ -1,8 +1,9 @@
 import ipfsApi from 'ipfs-api';
 
 const ipfs = ipfsApi('localhost', 5001);
+const HASH = 'QmVdqk9w4eLXSLt9CHVhsmidAng3GweFGPyMqPedWz4gd1';
 
-ipfs.cat('QmVdqk9w4eLXSLt9CHVhsmidAng3GweFGPyMqPedWz4gd1', function(err, result) {
+ipfs.cat(HASH, function(err, result) {
   if (err) {
     console.error(err);
   }
