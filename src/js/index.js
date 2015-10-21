@@ -1,18 +1,17 @@
-import ipfsApi from 'ipfs-api';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import domready from 'domready';
 
-const ipfs = ipfsApi('localhost', 5001);
-const HASH = 'QmVdqk9w4eLXSLt9CHVhsmidAng3GweFGPyMqPedWz4gd1';
-
-ipfs.cat(HASH, function(err, result) {
-  if (err) {
-    console.error(err);
+class App extends React.Component {
+  render() {
+    return <h1>Hello World!</h1>;
   }
+}
 
-  if(result.readable) {
-    console.log('Streaming...');
-    result.pipe(process.stdout);
-  } else {
-    console.log(result);
-  }
+domready(function() {
+  ReactDOM.render(
+    <App />,
+    document.getElementById('app')
+  );
 });
 
