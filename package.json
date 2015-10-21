@@ -1,0 +1,26 @@
+{
+  "name": "nyx",
+  "version": "0.1.0",
+  "description": "A simple blog platform that hosts content on IPFS",
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giodamelio/nyx.git"
+  },
+  "keywords": [
+    "IPFS",
+    "IPNS",
+    "blog",
+    "static",
+    "cms"
+  ],
+  "author": "Gio d'Amelio",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/giodamelio/nyx/issues"
+  },
+  "homepage": "https://github.com/giodamelio/nyx#readme",
+  "dependencies": {
+    "ipfs-api": "^2.4.1"
+  }
+}
