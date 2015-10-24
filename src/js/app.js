@@ -8,7 +8,7 @@ import {
   NavDropdown,
   MenuItem,
 } from 'react-bootstrap';
-import { LinkContainer } from 'react-router-bootstrap';
+import { LinkContainer, IndexLinkContainer } from 'react-router-bootstrap';
 
 export default class App extends React.Component {
   render() {
@@ -18,17 +18,13 @@ export default class App extends React.Component {
           <LinkContainer to='/'>
             <NavBrand>Nyx</NavBrand>
           </LinkContainer>
-          <Nav right eventKey={0}> {/* This is the eventKey referenced */}
-            <LinkContainer to='/'>
-              <NavItem>Home</NavItem>
+          <Nav eventKey={0}>
+            <IndexLinkContainer to='/'>
+              <NavItem>Posts</NavItem>
+            </IndexLinkContainer>
+            <LinkContainer to='/edit'>
+              <NavItem>Edit</NavItem>
             </LinkContainer>
-            <NavDropdown eventKey={3} title="Dropdown" id="collapsible-navbar-dropdown">
-              <MenuItem eventKey="1">Action</MenuItem>
-              <MenuItem eventKey="2">Another action</MenuItem>
-              <MenuItem eventKey="3">Something else here</MenuItem>
-              <MenuItem divider />
-              <MenuItem eventKey="4">Separated link</MenuItem>
-            </NavDropdown>
           </Nav>
         </Navbar>
 
