@@ -7,12 +7,12 @@ import App from './app';
 import Posts from './pages/posts';
 import Edit from './pages/edit';
 
-domready(function() {
+domready(function ready() {
   ReactDOM.render(
     <Router>
-      <Route path='/' component={App}>
+      <Route path="/" component={App}>
         <IndexRoute component={Posts} />
-        <Route path='/edit' component={Edit} />
+        <Route path="/edit" component={Edit} />
       </Route>
     </Router>,
     document.getElementById('app')
